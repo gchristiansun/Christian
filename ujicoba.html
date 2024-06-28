@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Makanan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        main {
+            width: 80%;
+            max-width: 800px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"] {
+            width: 80%;
+            max-width: 300px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #fafafa;
+        }
+
+        .card-content {
+            text-align: left;
+        }
+
+        .card-title {
+            margin: 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h2>Menu Makanan:</h2>
+        <div class="search-container">
+            <input type="text" id="search" placeholder="Cari makanan..." class="card-title">
+            <ul id="menu">
+                <!-- Hasil pencarian akan ditampilkan di sini -->
+            </ul>
+        </div>
+        <script>
+            const searchInput = document.getElementById('search');
+            const menuList = document.getElementById('menu');
+    
+            // Dummy data untuk makanan
+            const foods = [
+                "Cumi Balado",
+                "Kangkung",
+                "Pepes tahu",
+                "Nasi Goreng",
+                "Sate Ayam",
+                "Mie Goreng",
+                "Rendang",
+                "Bakso",
+                "Gado-gado",
+                "Soto Ayam",
+                "Ayam Bakar"
+            ];
+
+            // Fungsi untuk menampilkan makanan
+            function displayFoods(foods) {
+                menuList.innerHTML = '';
+                foods.forEach(food => {
+                    const li = document.createElement('li');
+                    li.textContent = food;
+                    menuList.appendChild(li);
+                });
+            }
+
+            // Fungsi untuk mencari makanan
+            function searchFoods(event) {
+                const searchText = event.target.value.toLowerCase();
+                const filteredFoods = foods.filter(food => 
+                    food.toLowerCase().includes(searchText)
+                );
+                displayFoods(filteredFoods);
+            }
+
+            // Event listener untuk pencarian
+            searchInput.addEventListener('input', searchFoods);
+
+            // Tampilkan semua makanan saat halaman dimuat
+            displayFoods(foods);
+        </script>
+        <section>
+            <div class="card">
+                <div class="card-content">
+                    <h2 class="card-title">Cumi Balado</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h2 class="card-title">Kangkung</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h2 class="card-title">Pepes tahu</h2>
+                </div>
+            </div>
+            <!-- Tambahkan card lain di sini jika diperlukan -->
+        </section>
+    </main>
+</body>
+</html>
