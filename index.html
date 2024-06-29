@@ -49,11 +49,12 @@
                 gap: 20px;
                 flex-wrap: wrap;
                 box-shadow: #666;
+                padding: 15px;
+                border-radius: 10px;
             }
 
             main {
-                padding: 15px;
-                margin-top: 10px;
+                margin-top: 10px;;
             }
 
             .card {
@@ -62,7 +63,8 @@
                 border-radius: 5px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 overflow: hidden;
-                margin: 20px;
+                margin-left: 20px;
+                margin-right: 20px
             }
 
             .card-content {
@@ -107,7 +109,7 @@
             }
 
             footer {
-                margin-top: 10px;
+                margin-top: 5px;
                 background-color: rgb(41, 42, 41);
                 /* padding: 15px; */
                 gap: 20px;
@@ -134,9 +136,9 @@
         </header>
 
         <main>
-            <img src="asset/WhatsApp Image 2024-06-29 at 12.11.41_2e7cfc58.jpg" alt="Image" style="width: 100%">
-            <section style="background-color: rgb(156, 19, 19); margin-top: 20px">
-                <div class="card">
+            <img src="asset/WhatsApp Image 2024-06-29 at 12.11.42_2d9b9045.jpg" alt="Image" style="width: 100%; border-radius: 10px;">
+            <section style="background-color: rgb(156, 19, 19); margin-top: 5px">
+                <div class="card" style="margin-top: 20px;">
                     <h2>Menu Makanan:<input style="margin-top: 40px;" type="text" id="searchmakanan" placeholder="Cari makanan..." class="card-title">
                         <ul id="menumakanan">
                             <!-- Hasil pencarian akan ditampilkan di sini -->
@@ -153,7 +155,7 @@
                             "Rendang",
                             "Ayam Bakar",
                             "Ayam Geprek",
-                            "Ayam Geprek",
+                            "Ayam Goreng",
                             "Tumis Toge",
                             "Tumis Kacang Panjang",
                             "Kentang Balado",
@@ -198,8 +200,8 @@
                         displayFoods(foods);
                     </script>
                 </div>
-                <div class="card">
-                    <h2>Menu Minuman:<input style="margin-top: 40px;" type="text" id="searchminuman" placeholder="Cari mainuman.." class="card-title">
+                <div class="card" style="margin-bottom: 20px;">
+                    <h2>Menu Minuman:<input style="margin-top: 5px;" type="text" id="searchminuman" placeholder="Cari mainuman.." class="card-title">
                         <ul id="menuminuman">
                             <!-- Hasil pencarian akan ditampilkan di sini -->
                         </ul></h2>
@@ -246,8 +248,8 @@
                 </div>
             </section>
             <footer>
-                <h3 style="color: white">Warung Nasi Khas Yogya</h3>
-                <p style="color: white">&copy; 2024 Warung Nasi Khas Yogya. All Rights Reserved.</p>
+                <h3 style="color: white; margin-top:50px">Warung Nasi Khas Yogya</h3>
+                <p style="color: white; margin-bottom: 50px">&copy; 2024 Warung Nasi Khas Yogya. All Rights Reserved.</p>
             </footer>
         </main>
     </body>
