@@ -55,7 +55,7 @@
             }
 
             .card {
-                width: 300px;
+                width: 400px;
                 background-color: #fff;
                 border-radius: 5px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -68,17 +68,36 @@
             }
 
             .card-title {
-                font-size: 1.2rem;
+                font-size: 2rem;
                 font-weight: bold;
                 margin-bottom: 10px;
                 text-decoration: none;
-                color: black
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
             }
 
             .card-description {
-                font-size: 1rem;
+                font-size: 1.5rem;
                 color: #666;
                 margin-bottom: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            li {
+                margin-bottom: 10px
+            }
+
+            footer {
+                margin-top: 5px;
+                background-color: rgb(41, 42, 41);
+                /* padding: 15px; */
+                gap: 20px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
             }
         </style>
     </head>
@@ -97,8 +116,66 @@
 
         <main>
             <section>
+                <div class="card">
+                    <div class="card-content">
+                        <h1 class="card-title">Menu 1<br>Nasi Ayam Bakar</h1>
+                        <hr>
+                        <ol class="card-description">
+                            <li>Nasi putih</li>
+                            <li>Ayam bakar</li>
+                            <li>Tempe</li>
+                            <li>Lalapan</li>
+                            <li>Kerupuk</li>
+                            <li>Sambal</li>
+                            <li>Buah</li>
+                            <li>Air mineral</li>
+                        </ol>
+                        <hr>
+                        <h2 class="card-title">Rp. 30.000, 00</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h1 class="card-title">Menu 2<br>Nasi Sayur Asem</h1>
+                        <hr>
+                        <ol class="card-description">
+                            <li>Nasi putih</li>
+                            <li>Ayam goreng</li>
+                            <li>Sayur asem</li>
+                            <li>Ikan asin/Tahu/Tempe</li>
+                            <li>Kerupuk</li>
+                            <li>Sambal</li>
+                            <li>Buah</li>
+                            <li>Air mineral</li>
+                        </ol>
+                        <hr>
+                        <h2 class="card-title">Rp. 33.000,00</h2>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h1 class="card-title">Menu 3<br>Nasi Rames</h1>
+                        <hr>
+                        <ol class="card-description">
+                            <li>Nasi putih</li>
+                            <li>Rendang daging sapi</li>
+                            <li>Tempe</li>
+                            <li>Lalapan</li>
+                            <li>Kerupuk</li>
+                            <li>Sambal</li>
+                            <li>Buah</li>
+                            <li>Air mineral</li>
+                        </ol>
+                        <hr>
+                        <h2 class="card-title">Rp. 38.000,00</h2>
+                    </div>
+                </div>
               
             </section>
+            <footer>
+                <h3 style="color: white; margin-top:50px">Warung Nasi Khas Yogya</h3>
+                <p style="color: white; margin-bottom: 50px">&copy; 2024 Warung Nasi Khas Yogya. All Rights Reserved.</p>
+            </footer>
         </main>
     </body>
 </html>
