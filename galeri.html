@@ -57,14 +57,21 @@
             .card {
                 width: 550px;
                 background-color: #fff;
-                border-radius: 5px;
+                border-radius: 20px;
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 overflow: hidden;
                 margin: 20px;
             }
 
+            .card:hover {
+                transform: scale(1.1)
+            }
+
             .card-content {
-                padding: 20px
+                padding: 20px;
+                display: flex;
+                justify-items: center;
+                align-items: center;
             }
 
             .card-title {
@@ -82,8 +89,23 @@
             }
 
             img {
-                width: 500px;
+                max-width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 20px;
+            }
+
+            footer {
+                margin-top: 5px;
+                background-color: rgb(41, 42, 41);
+                /* padding: 15px; */
+                gap: 20px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
                 justify-content: center;
+                align-items: center;
+                width: 100%;
             }
         </style>
     </head>
@@ -94,9 +116,7 @@
             <nav>
                 <a href="index.html">Home</a>
                 <a href="">Galleri</a>
-                <a href="katering.html">Katering</a>
-                <a href="">Makanan</a>
-                <a href="">Minuman</a>
+                <a href="katering.html">Box Catering</a>
             </nav>
         </header>
 
@@ -139,6 +159,10 @@
                 </div>
               
             </section>
+            <footer>
+                <h3 style="color: white; margin-top:50px">Warung Nasi Khas Yogya</h3>
+                <p style="color: white; margin-bottom: 50px">&copy; 2024 Warung Nasi Khas Yogya. All Rights Reserved.</p>
+            </footer>
         </main>
     </body>
 </html>
