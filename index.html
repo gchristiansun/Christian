@@ -5,14 +5,25 @@
             Warung Nasi Khas Yogya
         </title>
         <style>
-            .background {
-                display: flex;
+            /* .backgound-image {
+                background-image: url(asset/WhatsApp\ Image\ 2024-06-29\ at\ 12.11.43_9bc27593.jpg);
+                z-index: -1;
+                background-size: cover;
+                background-position: center;
+                /* position: fixed; */
+                /* top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0.5; Optional: Adjust opacity if needed */
+            /* } */ 
+
+            .backgound {
                 justify-content: center;
                 align-items: center;
-                height: 50vh;
-                width: auto;
+                /* height: 50vh; */
+                width: 100%;
                 margin: 0;
-                background-color: #f0f0f0;
             }
 
             header {
@@ -23,6 +34,7 @@
                 justify-content: space-between;
                 align-items: center;
                 align-content: center;
+                margin-bottom: 10px;
             }
 
             h1 {
@@ -64,7 +76,7 @@
                 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
                 overflow: hidden;
                 margin-left: 20px;
-                margin-right: 20px
+                margin-right: 20px;
             }
 
             .card-content {
@@ -82,7 +94,7 @@
             .card-description {
                 font-size: 1rem;
                 color: #666;
-                margin-bottom: 10px;
+                /* margin-bottom: 10px; */
             }
 
             ul {
@@ -122,7 +134,7 @@
 
             .floating {
                 position: fixed;
-                left: 85%;
+                right: 100px;
                 bottom: 200px;
                 padding: 20px;
                 background: white;
@@ -132,153 +144,172 @@
                 align-items: center;
                 width: 200px
             }
+
+            .grid {
+                margin-left:20px;
+
+                width: 50%
+
+            }
+
+            .container {
+                display: flex;
+            }
         </style>
     </head>
     <body>
-        <header>
-            <h2 style="font-family: Arial, sans-serif; color: white; margin-left: 30px">Warung Nasi Khas Yogya</h2>
-
-            <nav>
-                <a href="">Home</a>
-                <a href="galeri.html">Galleri</a>
-                <a href="katering.html">Box Catering</a>
-            </nav>
-        </header>
-
         <main>
-            <img src="asset/warung nasi khas yogya.png" alt="Image" style="width: 100%; border-radius: 10px;">
-            <section style="background-color: rgb(156, 19, 19); margin-top: 5px">
-                <div class="card" style="margin-top: 20px;">
-                    <h2>Menu Makanan:<input style="margin-top: 40px;" type="text" id="searchmakanan" placeholder="Cari makanan..." class="card-title">
-                        <ul id="menumakanan">
-                            <!-- Hasil pencarian akan ditampilkan di sini -->
-                        </ul></h2>
-                    <script>
-                        const searchInputmakanan = document.getElementById('searchmakanan');
-                        const menuListmakanan = document.getElementById('menumakanan');
-            
-                        const foods = [
-                            "Cumi Balado",
-                            "Kangkung",
-                            "Pepes tahu",
-                            "Mie Goreng",
-                            "Rendang",
-                            "Ayam Bakar",
-                            "Ayam Geprek",
-                            "Ayam Goreng",
-                            "Tumis Toge",
-                            "Tumis Kacang Panjang",
-                            "Kentang Balado",
-                            "Sayur Asem",
-                            "Sayur Sop",
-                            "Tongkol Balado",
-                            "Ikan Kembung Goreng",
-                            "Ikan Bawal Goreng",
-                            "Bakwan Udang",
-                            "Perkedel Jagung",
-                            "Tempe Mendoan",
-                            "Tempe Goreng", 
-                            "Gehu",
-                            "Kikil Balado",
-                            "Pepes Peda",
+            <div class="backgound-image">
+                <div class="backgound">
+                    <header>
+                        <h2 style="font-family: Arial, sans-serif; color: white; margin-left: 30px">Warung Nasi Khas Yogya</h2>
 
-                        ];
-                
-                        // Fungsi untuk menampilkan makanan
-                        function displayFoods(foods) {
-                            menuListmakanan.innerHTML = '';
-                            foods.forEach(food => {
-                                const li = document.createElement('li');
-                                li.textContent = food;
-                                menuListmakanan.appendChild(li);
-                            });
-                        }
-                
-                        // Fungsi untuk mencari makanan
-                        function searchFoods(event) {
-                            const searchText = event.target.value.toLowerCase();
-                            const filteredFoods = foods.filter(food => 
-                                food.toLowerCase().includes(searchText)
-                            );
-                            displayFoods(filteredFoods);
-                        }
-                
-                        // Event listener untuk pencarian
-                        searchInputmakanan.addEventListener('input', searchFoods);
-                
-                        // Tampilkan semua makanan saat halaman dimuat
-                        displayFoods(foods);
-                    </script>
+                        <nav>
+                            <a href="">Home</a>
+                            <a href="galeri.html">Galleri</a>
+                            <a href="katering.html">Box Catering</a>
+                        </nav>
+                    </header>
+
+                    <div>
+                        <img src="asset/warung nasi khas yogya.png" alt="Image" style="width: 100%; border-radius: 10px;">
+                        <section style="background-color: rgb(156, 19, 19); margin-top: 5px">
+                            <div class="card" style="margin-top: 20px;">
+                                <h2>Menu Makanan:<input style="margin-top: 40px;" type="text" id="searchmakanan" placeholder="Cari makanan..." class="card-title">
+                                    <ul id="menumakanan">
+                                        <!-- Hasil pencarian akan ditampilkan di sini -->
+                                    </ul></h2>
+                                <script>
+                                    const searchInputmakanan = document.getElementById('searchmakanan');
+                                    const menuListmakanan = document.getElementById('menumakanan');
+                        
+                                    const foods = [
+                                        "Cumi Balado",
+                                        "Kangkung",
+                                        "Pepes tahu",
+                                        "Mie Goreng",
+                                        "Rendang",
+                                        "Ayam Bakar",
+                                        "Ayam Geprek",
+                                        "Ayam Goreng",
+                                        "Tumis Toge",
+                                        "Tumis Kacang Panjang",
+                                        "Kentang Balado",
+                                        "Sayur Asem",
+                                        "Sayur Sop",
+                                        "Tongkol Balado",
+                                        "Ikan Kembung Goreng",
+                                        "Ikan Bawal Goreng",
+                                        "Bakwan Udang",
+                                        "Perkedel Jagung",
+                                        "Tempe Mendoan",
+                                        "Tempe Goreng", 
+                                        "Gehu",
+                                        "Kikil Balado",
+                                        "Pepes Peda",
+
+                                    ];
+                            
+                                    // Fungsi untuk menampilkan makanan
+                                    function displayFoods(foods) {
+                                        menuListmakanan.innerHTML = '';
+                                        foods.forEach(food => {
+                                            const li = document.createElement('li');
+                                            li.textContent = food;
+                                            menuListmakanan.appendChild(li);
+                                        });
+                                    }
+                            
+                                    // Fungsi untuk mencari makanan
+                                    function searchFoods(event) {
+                                        const searchText = event.target.value.toLowerCase();
+                                        const filteredFoods = foods.filter(food => 
+                                            food.toLowerCase().includes(searchText)
+                                        );
+                                        displayFoods(filteredFoods);
+                                    }
+                            
+                                    // Event listener untuk pencarian
+                                    searchInputmakanan.addEventListener('input', searchFoods);
+                            
+                                    // Tampilkan semua makanan saat halaman dimuat
+                                    displayFoods(foods);
+                                </script>
+                            </div>
+                            <div class="card" style="margin-bottom: 20px;">
+                                <h2>Menu Minuman:<input style="margin-top: 5px;" type="text" id="searchminuman" placeholder="Cari mainuman.." class="card-title">
+                                    <ul id="menuminuman">
+                                        <!-- Hasil pencarian akan ditampilkan di sini -->
+                                    </ul></h2>
+                                <script>
+                                    const searchInputminuman = document.getElementById('searchminuman');
+                                    const menuListminuman = document.getElementById('menuminuman');
+                        
+                                    const drink = [
+                                        "Es Teh Manis",
+                                        "Es Teh Tawar",
+                                        "Teh Manis Panas",
+                                        "Teh Tawar Panas",
+                                        "Es Kopi",
+                                        "Kopi Panas",
+                                        "Es Jeruk Peras",
+                                        "Jeruk Peras Panas",
+                                    ];
+                            
+                                    // Fungsi untuk menampilkan makanan
+                                    function displayDrink(drink) {
+                                        menuListminuman.innerHTML = '';
+                                        drink.forEach(drink => {
+                                            const li = document.createElement('li');
+                                            li.textContent = drink;
+                                            menuListminuman.appendChild(li);
+                                        });
+                                    }
+                            
+                                    // Fungsi untuk mencari makanan
+                                    function searchDrink(event) {
+                                        const searchText = event.target.value.toLowerCase();
+                                        const filteredDrink = drink.filter(drink => 
+                                            drink.toLowerCase().includes(searchText)
+                                        );
+                                        displayDrink(filteredDrink);
+                                    }
+                            
+                                    // Event listener untuk pencarian
+                                    searchInputminuman.addEventListener('input', searchDrink);
+                            
+                                    // Tampilkan semua makanan saat halaman dimuat
+                                    displayDrink(drink);
+                                </script>
+                            </div>
+                        </section>
+                    </div>
                 </div>
-                <div class="card" style="margin-bottom: 20px;">
-                    <h2>Menu Minuman:<input style="margin-top: 5px;" type="text" id="searchminuman" placeholder="Cari mainuman.." class="card-title">
-                        <ul id="menuminuman">
-                            <!-- Hasil pencarian akan ditampilkan di sini -->
-                        </ul></h2>
-                    <script>
-                        const searchInputminuman = document.getElementById('searchminuman');
-                        const menuListminuman = document.getElementById('menuminuman');
-            
-                        const drink = [
-                            "Es Teh Manis",
-                            "Es Teh Tawar",
-                            "Teh Manis Panas",
-                            "Teh Tawar Panas",
-                            "Es Kopi",
-                            "Kopi Panas",
-                            "Es Jeruk Peras",
-                            "Jeruk Peras Panas",
-                        ];
-                
-                        // Fungsi untuk menampilkan makanan
-                        function displayDrink(drink) {
-                            menuListminuman.innerHTML = '';
-                            drink.forEach(drink => {
-                                const li = document.createElement('li');
-                                li.textContent = drink;
-                                menuListminuman.appendChild(li);
-                            });
-                        }
-                
-                        // Fungsi untuk mencari makanan
-                        function searchDrink(event) {
-                            const searchText = event.target.value.toLowerCase();
-                            const filteredDrink = drink.filter(drink => 
-                                drink.toLowerCase().includes(searchText)
-                            );
-                            displayDrink(filteredDrink);
-                        }
-                
-                        // Event listener untuk pencarian
-                        searchInputminuman.addEventListener('input', searchDrink);
-                
-                        // Tampilkan semua makanan saat halaman dimuat
-                        displayDrink(drink);
-                    </script>
+                <a href="https://api.whatsapp.com/send?phone=6281311841240&text=Hello%20from%20WhatsApp" target="_blank">
+                    <div class="floating">
+                        <img src="asset/pngwing.com.png" style="width: 45px;">
+                        <h2 style="margin-left: 10px; color: black; font-size: 20pt;">WhatsApp</h2>
+                    </div>
+                </a>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Add any JavaScript interactions here if needed
+                    });
+                </script>
+                <div class="backgound">
+                    <div style= "text-align: center; margin-top: 2000px;">
+                        <h2>Lokasi Kami</h2>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.33120916981!2d106.26757367370199!3d-6.35114776213261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4210dc8e04bf55%3A0x69d814476934b51e!2sGua%20Maria%20Bukit%20Kanada!5e0!3m2!1sid!2sid!4v1719775999039!5m2!1sid!2sid"
+                            width="100%" height="100%" style="border-radius: 10px;" allowfullscreen="" aria-hidden="false" tabindex="0">
+                        </iframe>
+                    </div>
+                    <footer>
+                        <h3 style="color: white; margin-top:50px">Warung Nasi Khas Yogya</h3>
+                        <p style="color: white; margin-bottom: 50px">&copy; 2024 Warung Nasi Khas Yogya. All Rights Reserved.</p>
+                    </footer>
                 </div>
-            </section>
-            <a href="https://api.whatsapp.com/send?phone=6281311841240&text=Hello%20from%20WhatsApp" target="_blank">
-                <div class="floating">
-                    <img src="asset/pngwing.com.png" style="width: 45px;">
-                    <h2 style="margin-left: 10px; color: black; font-size: 20pt;">WhatsApp</h2>
-                </div>
-            </a>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                    // Add any JavaScript interactions here if needed
-                });
-            </script>
-            <div style="margin-top: 20px; text-align: left;">
-                <h2>Lokasi Kami</h2>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.33120916981!2d106.26757367370199!3d-6.35114776213261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4210dc8e04bf55%3A0x69d814476934b51e!2sGua%20Maria%20Bukit%20Kanada!5e0!3m2!1sid!2sid!4v1719775999039!5m2!1sid!2sid"
-                    width="100%" frameborder="2px" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
-                </iframe>
             </div>
-            <footer>
-                <h3 style="color: white; margin-top:50px">Warung Nasi Khas Yogya</h3>
-                <p style="color: white; margin-bottom: 50px">&copy; 2024 Warung Nasi Khas Yogya. All Rights Reserved.</p>
-            </footer>
         </main>
     </body>
 </html>
