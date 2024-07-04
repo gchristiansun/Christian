@@ -186,6 +186,21 @@
                 display: flex;
             }
 
+            .box {
+                width: 100%;
+                border-radius: 10px;
+                transform: translateX(400%);
+                transition: all 0.4s ease;
+            }
+
+            .box:nth-of-type(even) {
+                transform: translateX(-400%);
+            }
+
+            .box.show {
+                transform: translateX(0);
+            }
+
             /* .navbar:hover {
                 background-color: rgb(156, 19, 19);
             } */
@@ -319,6 +334,31 @@
                         </section>
                     </div>
                 </div>
+                <div class="box">
+                    <img src="asset/WhatsApp Image 2024-06-29 at 12.11.42_2d9b9045.jpg" alt="Image" style="width: 100%; border-radius: 10px; margin-top: 10px">
+                </div>
+                <script>
+                    const boxes = document.querySelectorAll('.box');
+        
+                    window.addEventListener('scroll', checkBoxes);
+        
+                    function checkBoxes() {
+                        const triggerBottom = window.innerHeight / 5 * 4;
+        
+                        boxes.forEach(box => {
+                            const boxTop = box.getBoundingClientRect().top;
+        
+                            if (boxTop < triggerBottom) {
+                                box.classList.add('show');
+                            } else {
+                                box.classList.remove('show');
+                            }
+                        });
+                    }
+        
+                    checkBoxes();
+                </script>
+        
                 <a href="https://api.whatsapp.com/send?phone=6281311841240&text=Hello%20from%20WhatsApp" target="_blank">
                     <div class="floating">
                         <img src="asset/pngwing.com.png" style="width: 45px;">
@@ -331,7 +371,7 @@
                     });
                 </script>
                 <div class="backgound">
-                    <div style= "text-align: center; margin-top: 2000px;">
+                    <div style= "text-align: center;">
                         <h2>Lokasi Kami</h2>
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.33120916981!2d106.26757367370199!3d-6.35114776213261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e4210dc8e04bf55%3A0x69d814476934b51e!2sGua%20Maria%20Bukit%20Kanada!5e0!3m2!1sid!2sid!4v1719775999039!5m2!1sid!2sid"
