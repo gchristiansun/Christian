@@ -93,7 +93,7 @@
             }
 
             .card-description {
-                font-size: 1rem;
+                font-size: 1.2rem;
                 color: #666;
                 /* margin-bottom: 10px; */
             }
@@ -159,12 +159,23 @@
                 display: flex;
             }
 
-            nav {
+            .navbar {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: rgb(100, 10, 10);
+                /* background-color: rgb(156, 19, 19); */
                 border-radius: 20px;
+                padding: 10px;
+                margin-left: 20px;
+                margin-right: 20px
+            }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                background-color: rgb(100, 10, 10);
+                border-radius: 30px;
                 padding: 10px;
             }
         </style>
@@ -177,9 +188,9 @@
                         <h2 style="font-family: Arial, sans-serif; color: white; margin-left: 30px">Warung Nasi Khas Yogya</h2>
 
                         <nav>
-                            <a href="">Home</a>
-                            <a href="galeri.html">Galleri</a>
-                            <a href="katering.html">Box Catering</a>
+                            <div class="navbar"><a href="">Home</a></div>
+                            <div class="navbar"><a href="galeri.html">Galleri</a></div>
+                            <div class="navbar"><a href="katering.html">Box Catering</a></div>
                         </nav>
                     </header>
 
