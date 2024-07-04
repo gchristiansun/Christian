@@ -51,7 +51,8 @@
                 text-decoration: none;
                 color: white;
                 font-size: 15pt;
-                margin-right: 30px
+                margin-right: 15px;
+                margin-left: 15px
             }
 
             section {
@@ -107,6 +108,8 @@
                 padding: 10px;
                 border-bottom: 1px solid #ccc;
                 text-align: left;
+                font-size: 1.2rem;
+                text-decoration: none;
             }
             
             input {
@@ -155,6 +158,15 @@
             .container {
                 display: flex;
             }
+
+            nav {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(100, 10, 10);
+                border-radius: 20px;
+                padding: 10px;
+            }
         </style>
     </head>
     <body>
@@ -173,7 +185,7 @@
 
                     <div>
                         <img src="asset/warung nasi khas yogya.png" alt="Image" style="width: 100%; border-radius: 10px;">
-                        <section style="background-color: rgb(156, 19, 19); margin-top: 5px">
+                        <section style="background: linear-gradient(to right, rgb(100, 10, 10), rgb(156, 19, 19)); margin-top: 5px">
                             <div class="card" style="margin-top: 20px;">
                                 <h2>Menu Makanan:<input style="margin-top: 40px;" type="text" id="searchmakanan" placeholder="Cari makanan..." class="card-title">
                                     <ul id="menumakanan">
