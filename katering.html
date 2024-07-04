@@ -16,7 +16,7 @@
             }
 
             header {
-                background-color: rgb(156, 19, 19);
+                background: linear-gradient(to right, rgb(100, 10, 10),rgb(156, 19, 19));
                 padding: 15px;
                 text-align: center;
                 display: flex;
@@ -114,6 +114,18 @@
                 width: 200px
             }
 
+            .navbar-select {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: color 0.3s;
+                border-radius: 20px;
+                padding: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                background-color: rgb(100, 10, 10)
+            }
+
             .navbar {
                 display: flex;
                 justify-content: center;
@@ -122,21 +134,17 @@
                 border-radius: 20px;
                 padding: 10px;
                 margin-left: 10px;
-                margin-right: 10px
+                margin-right: 10px;
+                background-color: rgb(156, 19, 19)
             }
 
             nav {
                 display: flex;
-                justify-content: center;
-                align-content: center;
-                background-color: rgb(100, 10, 10);
-                border-radius: 30px;
-                padding: 10px;
             }
 
-            .navbar:hover {
+            /* .navbar:hover {
                 background-color: rgb(156, 19, 19);
-            }
+            } */
         </style>
     </head>
     <body>
@@ -146,7 +154,7 @@
             <nav>
                 <div class="navbar"><a href="index.html">Home</a></div>
                 <div class="navbar"><a href="galeri.html">Galleri</a></div>
-                <div class="navbar"><a href="">Box Catering</a></div>
+                <div class="navbar-select"><a href="">Box Catering</a></div>
             </nav>
         </header>
 
